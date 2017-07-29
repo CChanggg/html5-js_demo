@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>豆瓣(手机版)</title>
+  <link rel="stylesheet" href="./douban.css">
+</head>
+
+<body ontouchstart>
+
+  <div id="TalionNav">
+    <header class="TalionNav">
+      <div class="TalionNav-primary">
+        <a href="/">
+          <h1>豆瓣</h1>
+        </a>
+        <nav>
+          <ul>
+            <li>
+              <a href="/movie" style="color:#2384E8;">电影</a>
+            </li>
+            <li>
+              <a href="/book" style="color:#9F7860;">图书</a>
+            </li>
+            <li>
+              <a href="/brodcast" style="color:#E4A813;">广播</a>
+            </li>
+            <li>
+              <a href="/group" style="color:#2AB8CC;">小组</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+  </div>
+  <div class="page">
+    <!-- 类名 card 卡片 适合于spa(单页应用) -->
+    <div class="card">
+      <h1 class="title">囚鸟</h1>
+      <!-- 语义化标签使用 section 区块
+      跟div一样的功能，但是语义是区分一个网页不同的内容快 -->
+      <section class="subject-info">
+        <!-- right 要将它float(离开文档流) 利用这个特性-->
+        <div class="right">
+          <a href="#">
+            <img src="https://img3.doubanio.com/lpic/s29474565.jpg" alt="" class="cover">
+          </a>
+        </div>
+        <div class="left">
+          <p class="rating">
+            <span class="rating-stars">
+              <span class="rating-star rating-star-medium-full"></span>
+              <span class="rating-star rating-star-medium-full"></span>
+              <span class="rating-star rating-star-medium-full"></span>
+              <span class="rating-star rating-star-medium-full"></span>
+              <span class="rating-star rating-star-medium-half"></span>
+            </span>
+            <strong>8.7</strong>
+            <span>868人评价</span>
+          </p>
+          <p class="meta">
+            <a href="#" title="库尔特冯内古特" class="author">库尔特冯内古特</a>
+            <a href="#" title="董乐三" class="author">董乐三</a>
+            //百花洲文艺出版社/304页/平装/38.00元/2017-6
+          </p>
+        </div>
+      </section>
+      <section class="subject-mark">
+      </section>
+      <section class="subject-intro">
+      </section>
+      <section class="tags">
+      </section>
+      <section class="subject-comments">
+      </section>
+      <section class="subject-annotations">
+      </section>
+      <section class="subject-rec">
+      </section>
+      <section class="subject-reviews">
+      </section>
+    </div>
+  </div>
+</body>
+
+</html>
