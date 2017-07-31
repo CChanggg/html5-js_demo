@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <script src="http://g.tbcdn.cn/mtb/lib-flexible/0.3.4/??flexible_css.js,flexible.js"></script>
+  <title>微信支付页面</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      outline: 0;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    html {
+      color: #000;
+      background: #fff;
+      font-family: sans-serif;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    html,
+    body,
+    .weixin_content {
+      height: 100%;
+      overflow: hidden;
+    }
+
+    .item-section {
+      min-height: 100%;
+      background-color: #FFFFFF;
+    }
+
+    .item-section-header {
+      height: 8.370370rem;
+      margin: 0 0.93rem;
+      border-bottom: 1px solid #CFCFCF;
+    }
+
+    .header-pic {
+      width: 100%;
+      margin-top: 2.555556rem;
+    }
+
+    .header-text span {
+      display: block;
+      width: 100%;
+      font-size: 0.518518rem;
+      color: #36A438;
+      margin-top: 0.444444rem;
+    }
+
+    .header-text strong {
+      display: block;
+      width: 100%;
+      font-size: 0.888889rem;
+      margin-top: 0.777778rem;
+    }
+
+
+    .item-section-middle {
+      width: 100%;
+      height: 6.66667rem;
+      margin-top: 0.666667rem;
+    }
+
+    .item-section-middle span {
+      font-size: 0.370370rem;
+      color: #9B9B9B;
+    }
+
+    .item-section-middle img {
+      width: 0.592592rem;
+      height: 0.592592rem;
+      vertical-align: middle;
+      margin-left: 0.925925rem;
+    }
+
+    .btn {
+      display: inline-block;
+      text-align: center;
+      width: 4.518518rem;
+      height: 0.925925rem;
+      line-height: 0.925925rem;
+      bottom: 1.925925rem;
+      background-color: #ffffff;
+      color: #36A438;
+      border-radius: .05rem;
+      border: 1px solid #36A438;
+      margin: 0 2.740740rem;
+      box-shadow: 0 0 2px #36A438;
+    }
+
+    @media all and (orientation: portrait) {}
+    /*判断横屏*/
+
+    @media all and (orientation:landscape) {
+      .item-section-header {
+        height: 4.5rem;
+        margin: 0 0.519750rem;
+        border-bottom: 1px solid #CFCFCF;
+      }
+      .header-pic {
+        margin-top: 1.2rem;
+      }
+
+      .header-text span {
+        font-size: 0.451221rem;
+        margin-top: .010417rem;
+      }
+      .header-text strong {
+        font-size: 0.701221rem;
+        margin-top: 0.416667rem;
+        font-weight: 550;
+      }
+      .item-section-middle {
+        position: relative;
+        margin-top: 0.374220rem;
+        height: 6.66667rem;
+        width: 10.960498rem;
+        margin-left: 0.519750rem;
+        margin-right: 0.519750rem;
+        display: inline-block;
+        /*overflow: hidden;
+        text-overflow: ellipsis;*/
+        white-space: nowrap;
+      }
+      .item-section-middle span {
+        font-size: 0.32rem;
+        display: inline-block;
+        vertical-align: middle;
+        /*overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;*/
+      }
+      .item-section-middle img {
+        width: 0.426530rem;
+        height: 0.426530rem;
+        margin-left: 5.255301rem;
+        vertical-align: middle;
+      }
+      .btn {
+        display: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="weixin_content">
+    <div class="item-section">
+      <div class="item-section-header" align="center">
+        <div class="header-pic">
+          <img src="./1.png" alt="">
+        </div>
+        <div class="header-text">
+          <span>支付成功</span>
+          <strong>￥15.00</strong>
+        </div>
+      </div>
+      <div class="item-section-middle" align="center">
+        <span>收款人</span>
+        <img src="./2.png" alt="">
+        <span>不求一万人追，只求一人...(***代)</span>
+      </div>
+      <a href="#" class="btn">完成</a>
+    </div>
+  </div>
+</body>
+
+</html>
