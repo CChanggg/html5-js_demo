@@ -5,3 +5,4 @@
 ### Scoped CSS Variable and JS ：[JS控制CSS练习](https://github.com/CChanggg/html5-js_demo/blob/master/css_variables.html)
 ### 36氪新闻模块练习 ： [36氪新闻模块练习](https://github.com/CChanggg/html5-js_demo/blob/master/1.html) 
 ### SegmentFault ： [活动模块练习](https://github.com/CChanggg/html5-js_demo/blob/master/event.html) 
+### 微信付钱页面联系 ： [横竖屏模块练习](https://github.com/CChanggg/html5-js_demo/tree/master/wechat)
