@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <script src="http://g.tbcdn.cn/mtb/lib-flexible/0.3.4/??flexible_css.js,flexible.js"></script>
+  <title>手淘h5 flexible 手机适配解决方案</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      outline: 0;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    html {
+      color: #000;
+      background: #fff;
+      font-family: sans-serif;
+    }
+
+    html,
+    body,
+    .html_content {
+      height: 100%;
+    }
+
+    .item-section {
+      min-height: 100%;
+      background-color: #ee0a3b;
+      position: relative;
+      font-size: 12px;
+    }
+
+    .item-section-header {
+      text-align: center;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-size: 100%;
+      font-weight: 500;
+    }
+
+    .item-section-header img {
+      /*给不同宽度的手机，动态的调整 html 的font-size
+        使得设备的宽度一定是10rem  1rem 设备的1/10 栅格处理方案
+        750px  500*250
+        (500/750)*10= rem
+        设计稿里一定是750 所有的margin、padding、w.h都除以75
+        标注出来的大小/设计稿宽度的十分之一
+        适配所有的设备：等比例 完美显示网页
+      */
+      width: 10rem;
+    }
+
+    .item-section ul {
+      padding: .266667rem;
+    }
+
+    .flag {
+      /*flex 布局 table 让我们的盒子像表格布局一样
+      快速实现column td */
+      display: table;
+      width: 100%;
+      margin-bottom: 1px;
+      background-color: white;
+    }
+
+    .flag .flag-item.figure {
+      width: 2.346667rem;
+      height: 2.346667rem;
+    }
+
+    .flag .flag-item.figure img {
+      width: 2.346667rem;
+      height: 2.346667rem;
+    }
+
+    .flag .flag-item {
+      display: table-cell;
+      padding: .16rem 0;
+      vertical-align: top;
+      background-color: #fff;
+    }
+
+    .flag .flag-item.figcaption {
+      /*除了第一个cell 我都要*/
+      width: 133.33333rem;
+      padding-left: .213333rem;
+      padding-right: .213333rem;
+      position: relative;
+    }
+
+    .flag .flag-title a {
+      color: #333;
+      line-height: 1.25;
+      overflow: hidden;
+      -webkit-line-clamp: 2;
+      display: -webkit-flex;
+      display: flex;
+      flex-direction: column;
+      text-overflow: ellipsis;
+    }
+
+    .flag .flag-price {
+      padding: .15rem 0 .2rem;
+    }
+
+    .flag .flag-price span {
+      display: inline-block;
+      background-color: #f32a4c;
+      vertical-align: middle;
+      border-radius: .0266667rem;
+      padding: .026667rem .08rem .013333rem;
+      color: #fff;
+      font-weight: 700;
+      margin-right: .066667rem;
+      font-size: 11px;
+    }
+
+    .flag .flag-price strong {
+      font-weight: 700;
+      display: inline-block;
+      color: #ee0a3b;
+      font-size: 16px;
+      margin-right: .16rem;
+    }
+
+    .flag .flag-price small {
+      display: inline-block;
+      vertical-align: middle;
+      font-weight: 700;
+      color: #ee0a3b;
+      font-size: 12px;
+    }
+
+    .flag .flag-btn {
+      position: absolute;
+      width: 2.133333rem;
+      height: .64rem;
+      line-height: .64rem;
+      bottom: 0.2rem;
+      right: 0.253333rem;
+      background-color: #ee0a3b;
+      color: #fff;
+      border-radius: .0266667rem;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 手机适配杀手在px 有retina问题 宽度不一致问题
+       weui 适配手机 em 针对字体的时候font-size
+       rem 近三年 taobao flexible 大漠
+       10px 解决方案 HTML font-size 10px
+  -->
+  <div class="html_content">
+    <div class="item-section">
+      <div class="item-section-header">
+        <h2>
+          <img src="http://gw.alicdn.com/mt/TB1PNLZKXXXXXaTXXXXXXXXXXXX-750-481.jpg" alt="">
+        </h2>
+      </div>
+      <ul>
+        <li class="flag" role="link">
+          <a href="#" class="figure flag-item">
+            <img src="https://placeimg.com/350/350/people/grayscale" alt="">
+          </a>
+          <div class="figcaption flag-item">
+            <div class="flag-title">
+              <a href="#">
+                Carter's1年式灰色长袖连体衣包脚爬服全棉鲸鱼男婴儿童装115G093
+              </a>
+            </div>
+            <div class="flag-price">
+              <span>双11价</span>
+              <strong>￥299.06</strong>
+              <small>(满400减100)</small>
+            </div>
+            <div class="flag-type">
+              一小时扫卖5885件
+            </div>
+            <a href="#" class="flag-btn">马上抢</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+
+</body>
+
+</html>
