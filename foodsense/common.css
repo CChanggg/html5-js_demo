@@ -1,0 +1,356 @@
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    font-weight: inherit;
+    font-style: normal;
+    vertical-align: baseline;
+    background: transparent;
+    border: 0;
+    outline: 0;
+}
+
+article,
+aside,
+figure,
+hgroup,
+footer,
+header,
+nav,
+section {
+    display: block;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+a,
+a:link,
+a:visited {
+    text-decoration: none;
+    color: #34AC98;
+}
+
+html {
+    height: 100%;
+}
+
+
+/* Mobile First? 当前以PC优先 */
+
+body {
+    width: 896px;
+    height: 100%;
+    min-height: 100%;
+    margin: 0 auto;
+    padding: 50px 48px 0;
+    line-height: 1;
+    color: #333;
+    background: #fff;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
+}
+
+#wrap {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    background: #fff;
+}
+
+header[role="masthed"] {
+    float: left;
+    width: 160px;
+    margin-bottom: 25px;
+}
+
+h1#branding {
+    display: block;
+    width: 120px;
+    height: 120px;
+    text-indent: -999em;
+    background: url(http://foodsense.is/-/img/food-sense.png)no-repeat 0 0;
+    transition: all .3s ease;
+}
+
+nav {
+    position: absolute;
+    top: 158px;
+    left: 0;
+    width: 160px;
+}
+
+nav li {
+    display: block;
+    margin-bottom: 18px;
+    line-height: 1.3em;
+}
+
+nav a {
+    display: block;
+    height: 28px;
+    line-height: 28px;
+    /* 空出间距给背景显示 */
+    padding: 4px 0 0 44px;
+    font-style: italic;
+    color: #222;
+    transition: all .2s ease;
+}
+
+nav li a {
+    background-repeat: no-repeat;
+    background-position: 0 65%;
+}
+
+li#t-tastemakers a {
+    background-image: url(http://foodsense.is/-/img/nav-tastemakers.png);
+}
+
+li#t-blog a {
+    background-image: url(http://foodsense.is/-/img/nav-blog.png);
+}
+
+li#t-vendors a {
+    background-image: url(http://foodsense.is/-/img/nav-alist.png);
+}
+
+li#t-contribute a {
+    background-image: url(http://foodsense.is/-/img/nav-contribute.png);
+}
+
+li#t-about a {
+    background-image: url(http://foodsense.is/-/img/nav-about.png);
+}
+
+nav a:hover {
+    color: #ec6635;
+}
+
+nav li a:hover {
+    background-position: 5px 65%;
+}
+
+
+/* 大一点的PC */
+
+@media only screen and (min-width:1176px) {
+    body {
+        width: 1080px;
+    }
+    #content {
+        float: right;
+        widows: 896px;
+    }
+}
+
+
+/* retian 屏 图片要显示的更清晰 
+   device物理-pixel像素-ratio 物理像素比
+*/
+
+@media only screen and (-webkit-min-device-pixel-ratio:2) {
+    header h1#branding {
+        background-position: left bottom;
+        background-size: 120px auto;
+    }
+}
+
+
+/* ipad 竖着拿的时候  */
+
+@media only screen and (max-width:991px) and (min-width:768px) {
+    body {
+        width: 712px;
+        padding: 20px 28px 0;
+    }
+    header[role="masthead"] {
+        width: 712px;
+        margin-bottom: 20px;
+    }
+    nav {
+        position: absolute;
+        top: 70px;
+        left: auto;
+        right: 0;
+        width: 528px;
+        margin: 0;
+    }
+    nav ul {
+        float: right;
+    }
+    nav li {
+        display: inline-block;
+    }
+    nav li a {
+        background-position: 50% 0;
+    }
+    nav a {
+        display: inline;
+        padding: 35px 15px 0px 15px;
+    }
+    nav li a:hover {
+        background-position: 50% 3px;
+    }
+}
+
+
+/* 手机 */
+
+@media only screen and (max-width:767px) {
+    header[role="masthead"] {
+        width: 100%;
+        margin: 69px 0 20px;
+    }
+    body {
+        width: 320px;
+        padding: 0;
+    }
+    header h1#branding {
+        margin: 0 auto;
+    }
+    nav {
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 49px;
+        font-size: .75em;
+        border-bottom: 1px solid #e5e5e5;
+        box-shadow: 0 1px 0 #f5f5f5;
+    }
+    nav li {
+        display: inline;
+        margin: 0;
+    }
+    nav li#t-tastemakers a,
+    nav li#t-blog a,
+    nav li#t-vendors a,
+    nav li#t-contribute a,
+    nav li#t-about a {
+        background-image: none;
+    }
+    nav a {
+        float: left;
+        margin: 0;
+        padding: 16px 8px 6px;
+    }
+}
+
+
+/* 竖着拿手机 */
+
+
+/* @media only screen and (max-width:480px) {
+    
+} */
+
+
+/* 横着拿手机 */
+
+@media only screen and (max-width:767px) and (min-width:480px) {
+    body {
+        width: 480px;
+        padding: 0;
+    }
+    header[role="masthead"] {
+        width: 100%;
+        margin: 20px 0;
+    }
+    header h1#branding {
+        margin-left: 20px;
+    }
+    nav {
+        top: 65px;
+        left: auto;
+        right: 25px;
+        width: 315px;
+        height: 20px;
+        font-size: .75em;
+        background: transparent;
+        border-bottom: none;
+        box-shadow: none;
+    }
+    nav ul {
+        position: absolute;
+        right: 0;
+    }
+    nav li {
+        display: inline;
+        margin: 0;
+    }
+    nav a {
+        float: left;
+        margin: 0 0 0 4px;
+        padding: 5px 5px 0 5px;
+    }
+}
