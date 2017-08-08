@@ -8,3 +8,4 @@
 ### 微信付钱页面联系 ： [横竖屏模块练习](https://github.com/CChanggg/html5-js_demo/tree/master/wechat)
 ### 手淘双十一结构练习：[手淘结构练习](https://github.com/CChanggg/html5-js_demo/tree/master/taobao_flexible) 
 ### 仿foodsense网页结构练习：[自适应网页练习](https://github.com/CChanggg/html5-js_demo/tree/master/foodsense) 
+### iPhone拨号界面联系：[结合flexible的练习](https://github.com/CChanggg/html5-js_demo/blob/master/phone.html) 
