@@ -1,0 +1,83 @@
+/*html 最大的就是根元素，CSS具有继承能力 inherit的能力，
+在它及body设置的样式，作用于所有元素 */
+
+
+/*CSS 重置 让浏览器变为一张白纸*/
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 10px;
+  /*方便后面的相对单位换算*/
+  height: 100%;
+  background: url(./1.jpg) bottom center;
+  background-repeat: no-repeat;
+  /*浏览器前缀 css3曾经是新的，很多浏览器不支持，或者部分支持，实验性质支持，加上前缀
+  移动端项目不需要PC版加上 */
+  -ms-background-size: cover;
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+.keys {
+  display: flex;
+  align-items: center;
+  /*垂直居中*/
+  justify-content: center;
+  /*水平居中*/
+  min-height: 100vh;
+  /*vh只屏幕有关，总共100份，比例分配*/
+}
+
+.key {
+  color: green;
+  border: .4rem solid #000;
+  /* rem? em vh css3里面的相对单位
+  rem是relative html标签的font-size等比例换算关系 大小与设备无关，
+  px不靠谱（屏幕密度）*/
+  -webkit-border-radius: .5rem;
+  /*-w-bdrs*/
+  border-radius: .5rem;
+  font-size: 1.5rem;
+  /*fsize1.5rem*/
+  margin: 1rem;
+  padding: 1rem .5rem;
+  /*p1.5rem*/
+  width: 10rem;
+  text-align: center;
+  background: rgba(0, 0, 0, .4);
+  text-shadow: 0 0 .5rem black;
+  /*水平 垂直偏移量 阴影大小 颜色*/
+  transition: all .07s ease;
+  /*给样式的变化自动添加渐变
+  all 支持的样式
+  .7 时间
+  ease 改变的速度 快速运动 由慢到快*/
+}
+
+/*key>div 也可以*/
+.key div {
+  font-size: 4rem;
+}
+
+.key .sound {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: .1rem;
+  color: #ffc600;
+}
+
+.playing {
+  transform: scale(1.1);/*变形放大*/
+  border-color: #ffc600;
+  box-shadow: 0 0 1rem #ffc600;
+}
