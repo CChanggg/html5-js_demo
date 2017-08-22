@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>lazyload throttle</title>
+    <link rel="stylesheet" href="http://axuebin.com/lazyload/normalize.css ">
+    <link rel="stylesheet" href="http://axuebin.com/lazyload/index.css ">
+</head>
+
+<body>
+    <div class="container">
+        <div class="img-area">
+            <img src="" alt="loading" class="my-photo lazyimg" data-original="http://axuebin.com/lazyload/img/img1.png ">
+        </div>
+        <div class="img-area">
+            <img src="" alt="loading" class="my-photo  lazyimg" data-original="http://axuebin.com/lazyload/img/img2.png ">
+        </div>
+        <div class="img-area">
+            <img src="" alt="loading" class="my-photo lazyimg" data-original="http://axuebin.com/lazyload/img/img3.png ">
+        </div>
+        <div class="img-area">
+            <img src="" alt="loading" class="my-photo lazyimg" data-original="http://axuebin.com/lazyload/img/img4.png ">
+        </div>
+        <div class="img-area">
+            <img src="" alt="loading" class="my-photo lazyimg" data-original="http://axuebin.com/lazyload/img/img5.png ">
+        </div>
+        <div class="img-area">
+            <img src="" alt="loading" class="my-photo lazyimg" data-original="http://axuebin.com/lazyload/img/img6.png ">
+        </div>
+        <div class="img-area">
+            <img src="" alt="loading" class="my-photo lazyimg" data-original="http://axuebin.com/lazyload/img/img7.png ">
+        </div>
+        <div class="img-area">
+            <img src="" alt="loading" class="my-photo lazyimg" data-original="http://axuebin.com/lazyload/img/img8.png ">
+        </div>
+        <div class="img-area">
+            <img src="" alt="loading" class="my-photo lazyimg" data-original="http://axuebin.com/lazyload/img/img9.png ">
+        </div>
+        <div class="img-area">
+            <img src="" alt="loading" class="my-photo lazyimg" data-original="http://axuebin.com/lazyload/img/img10.png ">
+        </div>
+    </div>
+    <!-- <script>
+        // 性能问题 如果都给src 请求数并发太多 浏览器对http请求数有限制 5-6个线程 c++写的
+        // chrome 请求数比较多 打开网页更快 牺牲了内存
+        // 打开页面变慢 线程以外的要等上面的加载完后回收再加载
+        // js优化， 第一个就是减少http请求数 
+        // script src 把所有的js打包成一个文件 main.js import require引入js 然后一键打包在压缩 一般就一个文件叫bundle.min.js 减少了http请求数
+        // 首屏打开速度 静态资源会缓存 
+        // link href 打包bundle.min.css
+        // img src  loading.gif(站位图，只会下载一个) 真正的地址放在标签内：data-origin
+        // css上 雪碧图 至少可以减少十几个http请求 
+        // iframe
+
+        const imgs = document.querySelectorAll('.lazyimg')
+            // 页面加载完成，检查一下图片，如果图片在第一屏，显示出来
+        window.onload = checkImgs; //变量提升
+        // 滚动的时候，浏览器是一个窗口 viewport 对应的网页内容在发送变化 scrollTop
+        // 检查，我们滚过的那块区域，是否有还未显示的图片
+        // throttle 节流，不要执行的太频繁
+        // 形成了高阶函数的应用场景 增强了函数的功能
+        window.onscroll = throttle(checkImgs)
+
+        function checkImgs() {
+            // console.log('checkImgs')
+            // Array.from(imgs)类数组变成真的数组 entries()迭代器
+            for ([i, img] of Array.from(imgs).entries()) {
+                // console.log(i)
+                // console.log(img)
+                if (isInSight(imgs[i])) {
+                    loadImg(imgs[i])
+                }
+            }
+        }
+
+        function isInSight(el) {
+            // el.getBoundingClientRect完全得到一个元素相对于当前窗口的大小
+            const bound = el.getBoundingClientRect()
+            const clientHeight = window.innerHeight
+            console.log(bound, clientHeight)
+            return bound.top <= clientHeight + 100
+        }
+
+        function loadImg(el) {
+            const src = el.dataset.src
+            if (src !== el.src) {
+                const source = src
+                let img = document.createElement('img')
+                img.onload = function() {
+                    el.src = source
+                }
+                img.src = source
+                    // alert(source)
+                el.src = source
+            }
+        }
+
+        function throttle(fn, mustRun = 500) {
+            let timer = null
+            let previous = null
+            return function() {
+                const now = new Date()
+                const that = this
+                const args = arguments
+                if (!previous) {
+                    previous = now
+                }
+                const remaining = now - previous
+                if (mustRun && remaining >= mustRun) {
+                    fn.apply(that, args)
+                    previous = now
+                }
+            }
+        }
+    </script> -->
+    <script src="http://cdn.bootcss.com/jquery/2.1.0/jquery.min.js"></script>
+    <script src="http://cdn.bootcss.com/jquery_lazyload/1.9.7/jquery.lazyload.min.js"></script>
+    <script>
+        $(function() {
+            $(".lazyimg").lazyload({
+                placeholder: '',
+                effect: "fadeIn",
+                threshold: 200 // 提前200像素加载
+            })
+        })
+    </script>
+</body>
+
+</html>
