@@ -11,4 +11,4 @@
 ### iPhone拨号界面联系：[结合flexible的练习](https://github.com/CChanggg/html5-js_demo/blob/master/phone.html) 
 ### 基于jQuery的贪吃蛇游戏：[jQuery的练习](https://github.com/CChanggg/html5-js_demo/blob/master/snake.html) 
 ### 陀螺仪-旋转的盒子：[css-3d的练习](https://github.com/CChanggg/html5-js_demo/blob/master/index.html) 
-
+### 懒加载图片:[懒加载图片练习](https://github.com/CChanggg/html5-js_demo/tree/master/lazy_load)
