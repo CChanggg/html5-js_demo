@@ -12,3 +12,4 @@
 ### 基于jQuery的贪吃蛇游戏：[jQuery的练习](https://github.com/CChanggg/html5-js_demo/blob/master/snake.html) 
 ### 陀螺仪-旋转的盒子：[css-3d的练习](https://github.com/CChanggg/html5-js_demo/blob/master/index.html) 
 ### 懒加载图片:[懒加载图片练习](https://github.com/CChanggg/html5-js_demo/tree/master/lazy_load)
+### 单页应用:[history_api](https://github.com/CChanggg/html5-js_demo/tree/master/history_api)
