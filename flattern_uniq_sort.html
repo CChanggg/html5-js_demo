@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script src="https://cdn.bootcss.com/lodash.js/4.17.4/lodash.js"></script>
+    <script>
+        // 校招题 数组扁平化flattern 去重uniq 排序sort
+        var arr = [[1,2,2],[3,4,5,5],[6,7,8,9,[11,12,[12,13,[14]]]],10]
+        // 扁平化 一个个的打开 很多层 递归
+        // instanceof Array 展开
+        // newArr
+        var newArr = []
+        // function flatternArr(arr) {
+            // 命令式编程 
+            // for(var i = 0; i< arr.length; i++){
+            //     if(arr[i] instanceof Array){
+            //         flatternArr(arr[i])//自己调用自己 递归  
+            //     }else{
+            //         newArr.push(arr[i])                    
+            //     }
+            // }
+            
+            // 函数式编程 代码是人与人交流的方式
+            // arr.forEach(function(item) {
+            //     item instanceof Array?flatternArr(item):newArr.push(item)
+            // })
+            // } 
+            // flatternArr(arr)
+            // lodash的方法
+            newArr = _.flattenDeep(arr)//推平
+            console.log(newArr)
+
+            var uniqArr = []
+            uniqArr[0] = newArr[0]
+            for (var i = 1; i < newArr.length; i++){
+                if(uniqArr.indexOf(newArr[i]) === -1){//表示以前从来没有出现过这一项
+                    uniqArr.push(newArr[i])
+                }
+            }
+            console.log(uniqArr)  
+            const uniqArr2 = Array.from(new Set(newArr))
+            console.log(uniqArr2)
+            const sortArr = uniqArr.sort(function(a,b) {
+                return a-b
+            })
+            console.log(sortArr)
+            console.log(_.sortedUniq(newArr))//去重
+            var users = [
+                {'user':'fred','age':48},
+                {'user':'barney','age':36},
+                {'user':'fred','age':40},
+                {'user':'barney','age':34}
+            ]
+            console.log(_.sortBy(users, ['user','age'],['asc','desc']))            
+    </script>
+</body>
+</html>
