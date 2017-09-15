@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ES6 新增数据结构</title>
+</head>
+<body>
+    <script>
+        // 集合  类似于数组，但是没有重复值。
+        // 天生就是一个数据结构 
+        const people = new Set()
+        people.add('Wes')
+        people.add('Snickers')
+        people.add('Kait')
+        people.add('超超')
+        people.add('超超')
+        for (const person of people) {
+            console.log(person)
+        }
+
+        const arr = [1,2,3,3,3,4]
+        const newArr = new Set(arr)
+        console.log(newArr)
+
+
+        const students = new Set(['Wes', 'Kara', 'Tony'])
+        const dogs = ['Snickers','Sunny']
+        const dogSet = new Set(dogs)
+        const dogValues = dogSet.values()
+        console.log(dogValues)
+        console.log(dogValues.next().value)
+        console.log(dogValues.next().value)
+        dogSet.add('小白')
+        console.log(dogValues.next().value)
+
+
+        let dog1 = {name: 'Snickers',age: 3 }
+        let dog2 = {name: 'Sunny',age: 1 }
+        const weakSauce = new WeakSet([dog1,dog2])
+        console.log(weakSauce)
+        dog1 = null 
+        console.log(weakSauce)
+        console.log(dog1)
+    </script>
+</body>
+</html>
