@@ -1,0 +1,21 @@
+{
+  "name": "datapicker",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "normalize.css": "^7.0.0",
+    "should": "^13.1.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "stylus:watch": "stylus -w -m styl/ -o css/",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
