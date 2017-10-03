@@ -15,4 +15,5 @@
 ### 单页应用:[history_api](https://github.com/CChanggg/html5-js_demo/tree/master/history_api)
 ### 日历组件:[学习测试驱动开发](https://github.com/CChanggg/html5-js_demo/tree/master/datapicker)
 ### 数组处理:[数组的处理](https://github.com/CChanggg/html5-js_demo/blob/master/flattern_uniq_sort.html)
+### typescript:[typescript](https://github.com/CChanggg/html5-js_demo/tree/master/try-typescript)
 	
